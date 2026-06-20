@@ -1,0 +1,96 @@
+2026-06-20 18:00:13 [INFO] c.m.A.AuthorAndBookManagementApplication - Starting AuthorAndBookManagementApplication using Java 21.0.10 with PID 11156 (C:\Users\arwin\OneDrive - Nagarro\Desktop\AuthorAndBookManagement\target\classes started by arwin in C:\Users\arwin\OneDrive - Nagarro\Desktop\AuthorAndBookManagement)
+2026-06-20 18:00:13 [DEBUG] c.m.A.AuthorAndBookManagementApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-20 18:00:13 [INFO] c.m.A.AuthorAndBookManagementApplication - No active profile set, falling back to 1 default profile: "default"
+2026-06-20 18:00:14 [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-06-20 18:00:14 [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-06-20 18:00:15 [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-20 18:00:15 [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 62 ms. Found 2 JPA repository interfaces.
+2026-06-20 18:00:16 [INFO] o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-06-20 18:00:16 [INFO] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-20 18:00:16 [INFO] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-20 18:00:16 [INFO] o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 2288 ms
+2026-06-20 18:00:16 [INFO] org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-20 18:00:16 [INFO] org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-06-20 18:00:17 [INFO] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-20 18:00:17 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-06-20 18:00:17 [INFO] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@52305819
+2026-06-20 18:00:17 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-06-20 18:00:18 [INFO] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/author_book_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.3
+	Default catalog/schema: author_book_db/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-20 18:00:19 [INFO] org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-20 18:00:19 [INFO] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-20 18:00:19 [INFO] o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-20 18:00:20 [WARN] o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-20 18:00:20 [INFO] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-06-20 18:00:21 [INFO] o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2026-06-20 18:00:21 [INFO] o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/'
+2026-06-20 18:00:21 [INFO] c.m.A.AuthorAndBookManagementApplication - Started AuthorAndBookManagementApplication in 8.192 seconds (process running for 9.112)
+2026-06-20 18:00:40 [INFO] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-20 18:00:40 [INFO] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-06-20 18:00:40 [INFO] o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2026-06-20 18:00:42 [INFO] o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 938 ms
+2026-06-20 18:01:53 [DEBUG] org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.country,
+        a1_0.email,
+        a1_0.name 
+    from
+        authors a1_0
+2026-06-20 18:03:42 [DEBUG] org.hibernate.SQL - 
+    select
+        b1_0.id,
+        b1_0.author_id,
+        b1_0.isbn,
+        b1_0.price,
+        b1_0.title 
+    from
+        books b1_0
+2026-06-20 18:03:42 [DEBUG] org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.country,
+        a1_0.email,
+        a1_0.name 
+    from
+        authors a1_0 
+    where
+        a1_0.id=?
+2026-06-20 18:03:42 [TRACE] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [3]
+2026-06-20 18:03:42 [DEBUG] org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.country,
+        a1_0.email,
+        a1_0.name 
+    from
+        authors a1_0 
+    where
+        a1_0.id=?
+2026-06-20 18:03:42 [TRACE] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [5]
+2026-06-20 18:03:42 [DEBUG] org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.country,
+        a1_0.email,
+        a1_0.name 
+    from
+        authors a1_0 
+    where
+        a1_0.id=?
+2026-06-20 18:03:42 [TRACE] org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [6]
+2026-06-20 18:04:15 [INFO] o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-20 18:04:15 [INFO] o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-06-20 18:04:15 [INFO] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-20 18:04:15 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-06-20 18:04:15 [INFO] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

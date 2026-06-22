@@ -30,5 +30,25 @@ pipeline {
                 sh 'mvn package'
             }
         }
+
+        stage('Docker Build') {
+            steps {
+                sh 'docker build -t author-book-management .'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                sh '''
+                docker stop author-book-app || true
+                docker rm author-book-app || true
+
+                docker run -d \
+                  -p 8081:8081 \
+                  --name author-book-app \
+                  author-book-management
+                '''
+            }
+        }
     }
 }
